@@ -28,9 +28,9 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
 
-      <section className="text-2xl pt-px">
-        <h2 className="text-2xl my-4 font-bold">Blog</h2>
-        <ul className="list-disc p-0 m-0">
+      <section className="pt-px text-2xl">
+        <h2 className="my-4 text-2xl font-bold">Blog</h2>
+        <ul className="m-0 list-disc p-0">
           {allPostsData.map(({ id, date, title }) => (
             <li className="mb-5" key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>

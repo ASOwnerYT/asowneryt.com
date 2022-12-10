@@ -7,13 +7,10 @@ export const siteTitle = "ASOwnerYT's Blog";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="max-w-xl px-4 mx-auto mt-12 mb-24">
+    <div className="mx-auto mt-12 mb-24 max-w-xl px-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta
-          name="description"
-          content="ASOwnerYT's Blog website"
-        />
+        <meta name="description" content="ASOwnerYT's Blog website" />
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
@@ -34,7 +31,7 @@ export default function Layout({ children, home }) {
               width={144}
               alt=""
             />
-            <h1 className="text-4xl font-bold my-4">{name}</h1>
+            <h1 className="my-4 text-4xl font-bold">{name}</h1>
           </>
         ) : (
           <>
@@ -48,10 +45,8 @@ export default function Layout({ children, home }) {
                 alt=""
               />
             </Link>
-            <h2 className="text-2xl font-bold p-3">
-              <Link href="/">
-                {name}
-              </Link>
+            <h2 className="p-3 text-2xl font-bold">
+              <Link href="/">{name}</Link>
             </h2>
           </>
         )}
@@ -59,7 +54,9 @@ export default function Layout({ children, home }) {
       <main>{children}</main>
       {!home && (
         <div className="mt-12">
-          <Link href="/" className="text-blue-800">← Back to home</Link>
+          <Link href="/" className="text-blue-800">
+            ← Back to home
+          </Link>
         </div>
       )}
     </div>
