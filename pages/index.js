@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
@@ -20,7 +19,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className="text-xl">
+      <section className="text-2xl">
         <p className="font-bold">Greetings! I'm ASOwnerYT</p>
         <ul className="list-inside list-disc">
           <li>HTML, CSS, JS</li>
@@ -29,14 +28,14 @@ export default function Home({ allPostsData }) {
         </ul>
       </section>
 
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+      <section className="text-2xl pt-px">
+        <h2 className="text-2xl my-4 font-bold">Blog</h2>
+        <ul className="list-disc p-0 m-0">
           {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li className="mb-5" key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <small className="text-slate-600">
                 <Date dateString={date} />
               </small>
             </li>
