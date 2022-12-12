@@ -7,7 +7,7 @@ export const siteTitle = "ASOwnerYT's Blog";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="mx-auto mt-12 mb-24 max-w-xl px-4">
+    <div className="mx-auto pt-12 pb-24 max-w-xl px-4">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="ASOwnerYT's Blog website" />
