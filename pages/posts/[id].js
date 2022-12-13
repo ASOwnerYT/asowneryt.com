@@ -24,17 +24,19 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
   return (
-    <Layout>
-      <Head>
-        <title>{postData.title}</title>
-      </Head>
-      <article>
-        <h1 className="text-2xl font-bold md:text-3xl">{postData.title}</h1>
-        <div className="pt-3 pb-6 text-slate-600">
-          <Date dateString={postData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-      </article>
-    </Layout>
+    <div className="dark:bg-slate-900 dark:text-white min-h-screen">
+      <Layout>
+        <Head>
+          <title>{postData.title}</title>
+        </Head>
+        <article>
+          <h1 className="text-2xl font-bold md:text-3xl">{postData.title}</h1>
+          <div className="pt-3 pb-6 text-slate-600 dark:text-slate-400">
+            <Date dateString={postData.date} />
+          </div>
+          <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        </article>
+      </Layout>
+    </div>
   );
 }
