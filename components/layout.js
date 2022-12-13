@@ -7,7 +7,7 @@ export const siteTitle = "ASOwnerYT's Blog";
 
 export default function Layout({ children, home }) {
   return (
-    <div className="mx-auto pt-12 pb-24 max-w-xl px-4">
+    <div className="mx-auto max-w-xl px-4 pt-12 pb-24">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="ASOwnerYT's Blog website" />
@@ -21,40 +21,22 @@ export default function Layout({ children, home }) {
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className="flex flex-col items-center">
-        {home ? (
-          <>
-            <Image
-              priority
-              src="/images/profile.jpg"
-              className="rounded-full"
-              height={144}
-              width={144}
-              alt=""
-            />
-            <h1 className="my-4 text-4xl font-bold">{name}</h1>
-          </>
-        ) : (
-          <>
-            <Link href="/">
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className="rounded-full"
-                height={108}
-                width={108}
-                alt=""
-              />
-            </Link>
-            <h2 className="p-3 text-2xl font-bold">
-              <Link href="/">{name}</Link>
-            </h2>
-          </>
-        )}
+        <Image
+          priority
+          src="/images/walterfreeman.gif"
+          className="rounded-full"
+          height={144}
+          width={144}
+          alt=""
+        />
+        <h1 className="my-4 text-4xl font-bold">
+          <Link href="/">{name}</Link>
+        </h1>
       </header>
       <main>{children}</main>
       {!home && (
         <div className="mt-12">
-          <Link href="/" className="text-blue-800">
+          <Link href="/" className="text-blue-800 dark:text-blue-200">
             ← Back to home
           </Link>
         </div>
