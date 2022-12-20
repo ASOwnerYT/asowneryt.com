@@ -23,7 +23,7 @@ export default function Layout({ children, home }) {
       <header className="flex flex-col items-center">
         <Image
           priority
-          src="/images/walterfreeman.gif"
+          src="/images/profile.jpg"
           className="rounded-full"
           height={144}
           width={144}

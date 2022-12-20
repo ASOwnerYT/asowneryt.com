@@ -3,6 +3,31 @@ import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import { FaDiscord, FaYoutube, FaMastodon } from "react-icons/fa";
+import { SiFiverr } from "react-icons/si";
+
+const socialMediaIcons = [
+  {
+    name: "YouTube",
+    icon: FaYoutube,
+    link: "https://www.youtube.com/asowneryt",
+  },
+  {
+    name: "Discord",
+    icon: FaDiscord,
+    link: "https://discord.gg/R8jZxhkQGp",
+  },
+  {
+    name: "Mastodon",
+    icon: FaMastodon,
+    link: "https://mastodon.nzoss.nz/@asowneryt",
+  },
+  {
+    name: "Fiverr",
+    icon: SiFiverr,
+    link: "https://www.fiverr.com/asowneryt",
+  }
+]
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -15,11 +40,19 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <div className="dark:bg-slate-900 min-h-screen dark:text-white">
+    <div className="min-h-screen dark:bg-slate-900 dark:text-white">
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css"></link>
         </Head>
+        <section className="flex justify-center space-x-3 pb-3">
+          {socialMediaIcons.map((social, index) => (
+            <a href={social.link} key={index} role="button">
+              <social.icon className="h-10 w-10" title={social.name} />
+            </a>
+          ))}
+        </section>
         <section className="text-2xl">
           <p className="font-bold">Greetings! I'm ASOwnerYT</p>
           <ul className="list-inside list-disc">
