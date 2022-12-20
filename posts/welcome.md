@@ -1,6 +1,6 @@
 ---
 title: "Welcome to my blog website!"
-date: "2022-12-13"
+date: "2022-12-20"
 ---
 
-my blog
+This is my blog website made with NextJS.
