@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 
 export default function Post({ postData }) {
   return (
-    <div className="dark:bg-slate-900 dark:text-white min-h-screen">
+    <div className="dark:bg-stone-900 dark:text-white min-h-screen">
       <Layout>
         <Head>
           <title>{postData.title}</title>
