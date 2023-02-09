@@ -40,7 +40,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <div className="min-h-screen dark:bg-stone-900 dark:text-white">
+    <div className="min-h-screen dark:bg-gray-900 dark:text-white">
       <Layout home>
         <Head>
           <title>{siteTitle}</title>
